@@ -6,7 +6,7 @@ RUN apt install -y wget
 
 RUN apt install -y php7.3 php-fpm php-mysql mariadb-client
 
-COPY conf/php.conf /etc/php/7.3/cli/php.ini
+COPY conf/php.conf /etc/php/7.3/fpm/php-fpm.conf
 
 RUN wget https://wordpress.org/wordpress-6.0.tar.gz -P /var/www
 
