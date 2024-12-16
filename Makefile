@@ -16,4 +16,7 @@ clean:
 	docker network prune -f
 	docker volume prune -f
 
-.PHONY: all re down stop clean
+fclean: clean
+	rm -rf /home/yallo/data/wordpress/* /home/yallo/data/mariadb/*
+
+.PHONY: all re down stop clean fclean
